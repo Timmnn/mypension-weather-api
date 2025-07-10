@@ -20,6 +20,7 @@ type WeatherSource = {
 
 type WeatherResponse = {
   temperatureC: number
+  // conditions arent provided by the apis, so i left that out
   wind: number
 }
 
@@ -41,7 +42,6 @@ const weatherSources: WeatherSource[] = [
       `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&units=metric&appid=${process.env.OPENWEATHERMAP_API_KEY}`,
     formatter: (data) => ({
       temperatureC: data.main.temp,
-      datetime: new Date().toISOString(),
       wind: data.wind.speed,
     }),
     apiKey: process.env.OPENWEATHERMAP_API_KEY,
