@@ -1,6 +1,9 @@
 {
   "name": "mypension",
   "module": "index.ts",
+  "scripts": {
+    "dev": "bun --watch index.ts"
+  },
   "type": "module",
   "private": true,
   "devDependencies": {
@@ -8,5 +11,12 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "@types/memory-cache": "^0.2.6",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "memory-cache": "^0.2.0"
   }
 }
