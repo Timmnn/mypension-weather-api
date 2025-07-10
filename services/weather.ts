@@ -143,13 +143,3 @@ const getCityCoords = async (city: string): Promise<Coordinates> => {
     throw error
   }
 }
-
-function getCurrentDate() {
-  const today = new Date()
-  const formatter = new Intl.DateTimeFormat('fr-CA', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  })
-  return formatter.format(today)
-}

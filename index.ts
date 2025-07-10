@@ -5,4 +5,8 @@ const app = express()
 
 app.use('/', WeatherRouter)
 
-app.listen(8000)
+const port = 8000
+
+app.listen(port, () => {
+  console.log(`Listening on Port ${port}`)
+})

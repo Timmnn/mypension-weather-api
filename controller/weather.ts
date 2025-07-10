@@ -15,7 +15,7 @@ export const WeatherController = {
       const weather = await WeatherService.getWeather(city)
       res.json(weather)
     } catch (e) {
-      res.status(500).json({ error: 'Internal Server Error' })
+      res.status(503).json({ error: 'Service Unavailable' })
     }
   },
 }
