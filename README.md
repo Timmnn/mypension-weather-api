@@ -1,10 +1,14 @@
-To install dependencies:
+## Installation:
+
+1. Install Dependencies
 
 ```bash
 bun install
 ```
 
-To run:
+2. Fill out the .env file
+
+3. Run it
 
 ```bash
 bun run index.ts
